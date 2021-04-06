@@ -89,14 +89,18 @@
             </div>
             <div class="amount column">
               <span>Valor</span>
-              <p>R$<%= job.budget.toFixed(2).replace('.', ',') %></p>
+              <p>R$<%= job.budget.toFixed(2).replace(".", ",") %></p>
             </div>
             <div class="status badge column">
               <%= job.status === 'done' ? 'Encerrado' : 'Em Andamento' %>
             </div>
             <div class="actions column flex">
               <p class="sr-only">Ações</p>
-              <a href="/job/edit" class="button white edit" title="Editar Job">
+              <a
+                href="/job/<%= job.id %> "
+                class="button white edit"
+                title="Editar Job"
+              >
                 <img src="/images/edit-24.svg" alt="Editar Job" />
               </a>
               <button class="delete button white" title="Excluir Job">
@@ -122,8 +126,6 @@
           Quer mesmo excluir esse job? <br />
           Ele será apagado para sempre.
         </p>
-
-        <p></p>
         <footer>
           <a class="button gray" href="#">Cancelar</a>
           <button class="button red" type="submit" form="delete-job">
