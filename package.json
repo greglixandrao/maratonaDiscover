@@ -5,7 +5,7 @@
   "main": "src/server.js",
   "scripts": {
     "dev": "nodemon .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "init-db": "node src/db/init.js"
   },
   "keywords": [],
   "author": "Greg Lixandrão",
